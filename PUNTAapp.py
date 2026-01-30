@@ -3,7 +3,7 @@ import requests
 import streamlit as st
 from bs4 import BeautifulSoup
 
-PUNTA_URL = "http://punta-server-prod-green.wsa.in.cld/api/renderer/report/byEnvironment/Zambeze/standard"
+PUNTA_URL = "http://10.13.236.57/api/renderer/report/byEnvironment/Zambeze/standard"
 
 st.set_page_config(page_title="Punta – App Versions", layout="wide")
 
