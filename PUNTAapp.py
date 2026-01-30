@@ -2,8 +2,15 @@ import pandas as pd
 import requests
 import streamlit as st
 from bs4 import BeautifulSoup
+import requests
 
 PUNTA_URL = "http://10.13.236.57/api/renderer/report/byEnvironment/Zambeze/standard"
+HEADERS = {"Host": "punta.corpad.net.local"}
+
+r = requests.get(PUNTA_URL, headers=HEADERS, timeout=30)
+r.raise_for_status()
+html = r.text
+
 
 st.set_page_config(page_title="Punta – App Versions", layout="wide")
 
